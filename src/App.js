@@ -13,6 +13,7 @@ import Menu from './Menu';
 import { Dashboard } from './dashboard';
 import customRoutes from './routes';
 import englishMessages from './i18n/en';
+import jsonServerProvider from 'ra-data-json-server';
 
 import {
     VisitorList,
@@ -30,8 +31,11 @@ import {
 import { CategoryList, CategoryEdit, CategoryIcon } from './categories';
 import { ReviewList, ReviewEdit, ReviewIcon } from './reviews';
 
-import dataProviderFactory from './dataProvider';
-import fakeServerFactory from './fakeServer';
+// import dataProviderFactory from './dataProvider';
+// import fakeServerFactory from './fakeServer';
+
+const dataProvider = jsonServerProvider('http://localhost:3001');
+// const dataProvider = jsonServerProvider('http://jsonplaceholder.typicode.com');
 
 const i18nProvider = locale => {
     if (locale === 'fr') {
@@ -43,6 +47,7 @@ const i18nProvider = locale => {
 };
 
 class App extends Component {
+    /*
     state = { dataProvider: null };
 
     async componentWillMount() {
@@ -56,17 +61,18 @@ class App extends Component {
     componentWillUnmount() {
         this.restoreFetch();
     }
+    */
 
     render() {
-        const { dataProvider } = this.state;
+        // const { dataProvider } = this.state;
 
-        if (!dataProvider) {
-            return (
-                <div className="loader-container">
-                    <div className="loader">Loading...</div>
-                </div>
-            );
-        }
+        // if (!dataProvider) {
+        //     return (
+        //         <div className="loader-container">
+        //             <div className="loader">Loading...</div>
+        //         </div>
+        //     );
+        // }
 
         return (
             <Admin

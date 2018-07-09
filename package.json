@@ -11,6 +11,7 @@
         "json-graphql-server": "~2.1.1",
         "ra-data-fakerest": "^2.0.0",
         "ra-data-graphql-simple": "^2.0.0",
+        "ra-data-json-server": "^2.1.1",
         "ra-data-simple-rest": "~2.0.0",
         "ra-input-rich-text": "^2.0.0",
         "ra-language-english": "^2.0.0",
@@ -60,6 +61,9 @@
         "eject": "react-scripts eject"
     },
     "homepage": "https://marmelab.com/react-admin-demo",
-    "workspaces": ["packages/*", "examples/*", "cypress"]
-
+    "workspaces": [
+        "packages/*",
+        "examples/*",
+        "cypress"
+    ]
 }
