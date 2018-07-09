@@ -70,7 +70,7 @@ class App extends Component {
 
         return (
             <Admin
-                title="Posters Galore Admin"
+                title="Mannir e-Revenue System"
                 dataProvider={dataProvider}
                 customReducers={{ theme: themeReducer }}
                 customSagas={sagas}
